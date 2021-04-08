@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>ECMAScript</title>
+    <style>
+        #box {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #box>div {
+            height: 5em;
+            width: 5em;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Let & const</h1>
+    <div id="box"></div>
+    <script type="text/javascript">
+        var div;
+        var box = document.getElementById('box');
+
+        for (let i = 0; i < 5; i++) {
+            div = document.createElement('div');
+            div.onclick = function () {
+                alert("This is box #" + i);
+            }
+            box.appendChild(div);
+        }
+
+        const pizza = true;
+        //pizza = false; //cant use like this
+        console.log(pizza);
+    </script>
+</body>
+
+</html>
